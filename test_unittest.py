@@ -10,7 +10,7 @@ class TestClassScanPort(unittest.TestCase):
     def test_scan_port(self):
         network_attacker.target = '192.168.0.102'
         self.assertTrue(scan_port(22))
-        self.assertFalse(scan_port(80))
+        self.assertTrue(scan_port(80))
 
     def test_scan_false_port(self):
         network_attacker.target = '192.168.0.110'

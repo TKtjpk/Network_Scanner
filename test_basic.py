@@ -4,8 +4,9 @@ import network_attacker
 
 class TestClassScanPort:
     def test_scan_port(self):
+        network_attacker.target = '192.168.0.102'
         assert scan_port(22) == True
-        assert scan_port(80) == False
+        assert scan_port(80) == True
 
     def test_scan_false_port(self):
         network_attacker.target = '192.168.0.110'

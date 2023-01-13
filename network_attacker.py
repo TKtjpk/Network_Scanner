@@ -22,6 +22,12 @@ BLUE = Fore.BLUE
 RED = Fore.RED
 
 
+# Assign variables
+target = '192.168.0.102'
+registered_ports = range(1, 1024, 1)
+open_ports = []
+
+
 # Ensure correct program usage
 if len(sys.argv) != 2:
     print("USAGE: python3 network_attacker.py TARGET(IP_ADDR)")
@@ -29,11 +35,6 @@ if len(sys.argv) != 2:
     print('default: 192.168.0.102')
 else:
     target = sys.argv[1]
-
-# Assign variables
-target = '192.168.0.102'
-registered_ports = range(1, 1024, 1)
-open_ports = []
 
 
 # Main function
